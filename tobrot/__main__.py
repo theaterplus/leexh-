@@ -37,8 +37,8 @@ from tobrot import (
     CLONE_COMMAND_G
 )
 
-from pyrogram import Client, filters
-from pyrogram.handlers import MessageHandler, CallbackQueryHandler
+from pyrogram import Client, Filters
+from pyrogram.Handlers import MessageHandler, CallbackQueryHandler
 
 from tobrot.plugins.new_join_fn import new_join_f, help_message_f, rename_message_f
 from tobrot.plugins.incoming_message_fn import incoming_message_f, incoming_youtube_dl_f, incoming_purge_message_f, incoming_gdrive_message_f, g_yt_playlist, g_clonee
