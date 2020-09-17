@@ -447,18 +447,17 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 except:
                     pass
                 #
-                msg = f"\nDownloading :『{file.progress_string()} 』           
-		    `{downloading_dir_name}`"
-                msg += f"\nSpeed🚀: {file.download_speed_string()} 🔽 / {file.upload_speed_string()} 🔼"
-                msg += f"\nTotal Size🙄: {file.total_length_string()}"
+                msg = f"\n<b>Downloading :</b>『{file.progress_string()} 』    `{downloading_dir_name}`"
+                msg += f"\n<b>Speed</b>: {file.download_speed_string()} 🔽 / {file.upload_speed_string()} 🔼"
+                msg += f"\n<b>Total Size</b>: {file.total_length_string()}"
 
                 if is_file is None :
-                   msg += f"\n<b>Connections🌪:</b> {file.connections}"
+                   msg += f"\n<b>Connections :</b> {file.connections}"
                 else :
                    msg += f"\n<b>Info:</b>[ P : ,<code>{file.connections} || S : {file.num_seeders} ]</code>"
 
-                # msg += f"\nStatus: {file.status}"
-                msg += f"\n<b>Time Left 📈:</b> {file.eta_string()}"
+                msg += f"\n<b>Status:</b> {file.status}"
+                msg += f"\n<b>Time Left :</b> {file.eta_string()}"
                 msg += f"\n© @FILMYFLX | @THUGLIFEBOTS"
                 inline_keyboard = []
                 ikeyboard = []
