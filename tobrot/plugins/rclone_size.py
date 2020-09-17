@@ -11,7 +11,7 @@ from tobrot import (
     DESTINATION_FOLDER,
     RCLONE_CONFIG
 )
-from pyrogram.types import (
+from pyrogram (
     InlineKeyboardButton,
     InlineKeyboardMarkup
 )
