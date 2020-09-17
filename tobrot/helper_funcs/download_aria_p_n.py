@@ -46,7 +46,7 @@ async def aria_start():
     # but for now, https://t.me/TrollVoiceBot?start=858
     aria2_daemon_start_cmd.append("--enable-rpc")
     aria2_daemon_start_cmd.append("--follow-torrent=mem")
-    aria2_daemon_start_cmd.append("--max-connection-per-server=10")
+    aria2_daemon_start_cmd.append("--max-connection-per-server=30")
     aria2_daemon_start_cmd.append("--min-split-size=10M")
     aria2_daemon_start_cmd.append("--rpc-listen-all=false")
     aria2_daemon_start_cmd.append(f"--rpc-listen-port={ARIA_TWO_STARTED_PORT}")
@@ -235,7 +235,7 @@ async def call_apropriate_function(
             message_id = final_response[key_f_res_se]
             channel_id = str(sent_message_to_update_tg_p.chat.id)[4:]
             private_link = f"https://t.me/c/{channel_id}/{message_id}"
-            message_to_send += "👉 <a href='"
+            message_to_send += "📂 <a href='"
             message_to_send += private_link
             message_to_send += "'>"
             message_to_send += local_file_name
@@ -244,7 +244,7 @@ async def call_apropriate_function(
         if message_to_send != "":
             mention_req_user = f"<a href='tg://user?id={user_id}'>Your Requested Files</a>\n\n"
             message_to_send = mention_req_user + message_to_send
-            message_to_send = message_to_send + "\n\n" + "#uploads"
+            message_to_send = message_to_send + "\n\n" + "#uploads ©️ @FIMYFLX"
         else:
             message_to_send = "<i>FAILED</i> to upload files. 😞😞"
         await user_message.reply_text(
@@ -447,17 +447,18 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 except:
                     pass
                 #
-                msg = f"\nDownloading :『{file.progress_string()} 』            `{downloading_dir_name}`"
+                msg = f"\nDownloading :『{file.progress_string()} 』           
+		    `{downloading_dir_name}`"
                 msg += f"\nSpeed🚀: {file.download_speed_string()} 🔽 / {file.upload_speed_string()} 🔼"
                 msg += f"\nTotal Size🙄: {file.total_length_string()}"
 
                 if is_file is None :
                    msg += f"\n<b>Connections🌪:</b> {file.connections}"
                 else :
-                   msg += f"\n<b>Info:</b>[ P : {file.connections} || S : {file.num_seeders} ]"
+                   msg += f"\n<b>Info:</b>[ P : ,<code>{file.connections} || S : {file.num_seeders} ]</code>"
 
                 # msg += f"\nStatus: {file.status}"
-                msg += f"\nTime Left 📈: {file.eta_string()}"
+                msg += f"\n<b>Time Left 📈:</b> {file.eta_string()}"
                 msg += f"\n© @FILMYFLX | @THUGLIFEBOTS"
                 inline_keyboard = []
                 ikeyboard = []
