@@ -102,7 +102,7 @@ if __name__ == "__main__" :
     #
     incoming_size_checker_handler = MessageHandler(
         check_size_g,
-        filters=Filters.command([f"{GET_SIZE_G}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command([f"{GET_SIZE_G}"]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_size_checker_handler)
     #
