@@ -39,7 +39,7 @@ from tobrot import (
     UPLOAD_AS_DOC
 )
 
-from pyrogram.types import (
+from pyrogram import (
     InputMediaDocument,
     InputMediaVideo,
     InputMediaAudio
