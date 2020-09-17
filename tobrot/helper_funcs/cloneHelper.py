@@ -8,7 +8,7 @@ import subprocess
 import asyncio
 import os
 import re
-import pyrogram.types as pyrogram
+import pyrogram
 import requests
 
 import logging
