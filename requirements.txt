@@ -1,5 +1,5 @@
 aiohttp
-aria2p
+https://github.com/patwari6862/heroku-aria2c.git
 hachoir
 Pillow
 https://github.com/Mahesh0253/pyrogram/archive/asyncio.zip
